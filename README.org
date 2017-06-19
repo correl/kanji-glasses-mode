@@ -1,0 +1,16 @@
+#+TITLE: kanji-glasses-mode
+#+STARTUP: indent
+
+Provides a minor mode for displaying the hiragana reading alongside
+kanji present in a buffer. This is accomplished using overlays, so the
+contents of the buffer are not modified at all.
+
+Enabling this mode will take some time on a buffer with a lot of kanji
+present. To combat this, I've memoized the transliteration method, so
+it at least won't look up the same thing more than once.
+
+Currently relies on [[https://github.com/wsgac/kanji-mode][kanji-mode]] for its =km:kanji->hiragana= method
+(which in turn relies on having [[http://kakasi.namazu.org/][kakasi]] installed) to transliterate
+kanji to hiragana.
+
+[[file:recorded.gif]]
